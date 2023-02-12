@@ -58,9 +58,10 @@ for (let i = 0; i < 13; i++) {
 console.log('||')
 
 
-console.log('Task 5\n Guess number 1 to 100')
+console.log('Task 5\n Guess number 1 to 10')
+alert('Task 5\n Guess number 1 to 10')
 
-const random = Math.random() * 100
+const random = Math.floor(Math.random() * 10) 
 
 while (true) {
     let number = prompt('Введите число: ')
@@ -69,12 +70,12 @@ while (true) {
         alert('Вы ввели не число! Пожалуйста введите число')
     }
 
-    if (random > number) {
-        console.log('Ваше число меньше')
-    } else if (random < number) {
-        console.log('Ваше число больше')
+    if (random < number) {
+        alert('Ваше число больше')
+    } else if (random > number) {
+        alert('Ваше число меньше')
     } else {
-        console.log('Угадано')
+        alert('Угадано')
         break;
     }
 }
@@ -138,4 +139,3 @@ while (true){
         }
     }
 }
-
