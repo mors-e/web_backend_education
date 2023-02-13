@@ -45,17 +45,16 @@ for (let i = 0; i <= number; i++) {
 
 console.log('Task 4 \n Christmas tree')
 
-const star = '*'
-const sharp = '#'
-
-for (let i = 0; i < 13; i++) {
+let res = ''
+for (let i = 0; i < 13; i++){
     if (i % 2 === 1) {
-        console.log(`${star.repeat(i)}`)
+        res = res + '*'.repeat(i) + '\n'
     } else {
-        console.log(`${sharp.repeat(i)}`)
+        res = res + '#'.repeat(i) + '\n'
     }
 }
-console.log('||')
+res = res + '||'
+console.log(res)
 
 
 console.log('Task 5\n Guess number 1 to 10')
