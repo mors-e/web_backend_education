@@ -9,6 +9,7 @@ switch (p){
 
         console.log(`${speed_metr} km/h -> ${speed_metr / 3.6} metr/sec \n`)
         console.log(`${speed_kilometr} metr/sec -> ${speed_kilometr * 3.6} km/h \n`)
+        break;
     case '2':
         console.log('Task 2 \n Triangle')
 
@@ -24,7 +25,7 @@ switch (p){
         } else {
             console.log('Task 2 \n Triangle not exists');
         }
-
+        break;
     case '3':
         console.log('Task 3 \n Fizz-Buzz')
 
@@ -44,16 +45,18 @@ switch (p){
                 console.log(`${i} fizz`)
             }
         }
+        break;
     case '4':
         console.log('Task 4 \n Christmas tree')
 
         let res
         for (let i = 0; i < 13; i++){
-            if (i % 2 === 1) res += '#'.repeat(i) + "\n";
-            else res += '*'.repeat(i) + "\n";
+            if (i % 2 === 1) res += '*'.repeat(i) + "\n";
+            else res += '#'.repeat(i) + "\n";
         }
         res = res + '||'
         console.log(res)
+        break;
     case '5':
         console.log('Task 5\n Guess number 0 to 10')
         alert('Task 5\n Guess number 0 to 10')
@@ -76,7 +79,7 @@ switch (p){
                 break;
             }
         }
-
+        break;
     case '6':
         console.log('Task 6\n Devision')
 
@@ -103,6 +106,7 @@ switch (p){
             break
         }
     }
+    break;
     case '7':
         console.log('Task 7\n Quarters')
 
@@ -123,16 +127,16 @@ switch (p){
         
         const month = prompt('Введите месяц например (месяц 2 или 2):')
         
-        while (true){
-            if (!isNaN(month)){
-                checkQuarters(month)
+        
+        if (!isNaN(month)){
+            checkQuarters(month)
+        }else{
+            const listMonth = month.split(' ')
+            if (!isNaN(listMonth[1])){
+                checkQuarters(listMonth[1])
             }else{
-                const listMonth = month.split(' ')
-                if (!isNaN(listMonth[1])){
-                    checkQuarters(listMonth[1])
-                }else{
-                    alert('Введите как в примере')
-                }
+                alert('Введите как в примере')
             }
         }
+        break;
 }
