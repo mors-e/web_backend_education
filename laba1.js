@@ -108,23 +108,7 @@ switch (p){
     }
     break;
     case '7':
-        console.log('Task 7\n Quarters')
-
-        function checkQuarters(month){
-            if (month < 4 && month > 0){
-                console.log(`месяц ${month} => 1 квартал`);
-            }
-            if (month > 3 && month < 7){
-                console.log(`месяц ${month} => 2 квартал`);
-            }
-            if ((month > 6 && month < 10)){
-                console.log(`месяц ${month} => 3 квартал`);
-            }
-            if((month > 9 && month < 13)){
-                console.log(`месяц ${month} => 4 квартал`);
-            }
-        }
-        
+        console.log('Task 7\n Quarters')        
         const month = prompt('Введите месяц например (месяц 2 или 2):')
         
         
@@ -139,4 +123,19 @@ switch (p){
             }
         }
         break;
+}
+
+function checkQuarters(month){
+    if (month < 4 && month > 0){
+        console.log(`месяц ${month} => 1 квартал`);
+    }
+    if (month > 3 && month < 7){
+        console.log(`месяц ${month} => 2 квартал`);
+    }
+    if ((month > 6 && month < 10)){
+        console.log(`месяц ${month} => 3 квартал`);
+    }
+    if((month > 9 && month < 13)){
+        console.log(`месяц ${month} => 4 квартал`);
+    }
 }
