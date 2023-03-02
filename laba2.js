@@ -134,24 +134,27 @@ function level5(){
 
 function convertSpeed(speed, toConvert) {
     if (toConvert == 'toMS'){
-        console.log(`${speed} km/h -> ${speed / 3.6} metr/sec \n`)
-    }else if (toConvert == 'toKMH'){
-        console.log(`${speed} metr/sec -> ${speed * 3.6} km/h \n`)
+        return speed/3.6
+    }
+    if (toConvert == 'toKMH'){
+        return speed*3.6
     }else{
         console.log('Введите как в примере!')
     }
+
 }
 
 function absValue(number) {
-        if (number > 0){
-            console.log(`${number}`)
-        }else{
-            console.log(`${-1*number}`)
-        }
+    if (number > 0){
+        return number
+    }
+    
+    return -1*number
 }
 
 function randomNumber(min, max){
     min = Math.ceil(min);
     max = Math.floor(max);
+
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
