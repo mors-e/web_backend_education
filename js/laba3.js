@@ -32,7 +32,7 @@ function onInputBlur(event) {
         errorMessage = `Минимальная длина ${input.minLength} сим.`;
     }
     else if (validState.typeMismatch) {
-        errorMessage = "Неправильный формат ввода";
+        errorMessage = "Неправильный формат ввода ";
     }
     else if (validState.valid) {
         errorMessage = "";
@@ -72,3 +72,7 @@ form.addEventListener("submit", onFormSubmit)
 form.querySelectorAll("input[required]").forEach(input => {
     input.addEventListener("blur", onInputBlur)
 })
+
+window.onclick = function() {
+    modal.style.display = "block"
+}
